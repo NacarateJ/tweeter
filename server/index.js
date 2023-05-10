@@ -30,6 +30,7 @@ require("./lib/date-adjust")();
 const tweetsRoutes = require("./routes/tweets")(DataHelpers);
 
 // Mount the tweets routes at the "/tweets" path prefix:
+// Any requests made to URLs starting with /tweets will be handled by the tweetsRoutes module
 app.use("/tweets", tweetsRoutes);
 
 app.listen(PORT, () => {

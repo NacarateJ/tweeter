@@ -17,6 +17,6 @@ module.exports = () => {
     tweet.created_at = Date.now() - (oneDayMs * (tweetsJSON.length - index));
     return tweet;
   });
-  // Re-write the tweets with the new date values.
+  // Re-write the tweets with the new date values.                                           2 = number of spaces for indentation
   fs.writeFileSync('server/data-files/initial-tweets.json', JSON.stringify(tweetsJSON, null, 2), { encoding: "utf8" });
 };
