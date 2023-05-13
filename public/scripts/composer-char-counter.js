@@ -14,7 +14,13 @@ $(document).ready(function () {
     // with a .counter class inside the div element
     // The text() method is used to set the text content of
     // the element with a .counter class to the number of remaining characters
-    const counter = $(this).siblings("div").find(".counter");
-    counter.text(remaining);
+    const counter = $(this).siblings("div").find(".counter").text(remaining);
+
+    // Change color to red if users exceed the 140 character limit
+    if (remaining <= 0) {
+      counter.addClass("invalid");
+    } else {
+      counter.removeClass("invalid");
+    }
   });
 });
