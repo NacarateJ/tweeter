@@ -16,6 +16,10 @@ textarea {
   resize: none;
 }
 
+textarea:focus {
+    outline: none;
+}
+
 div {
   display: flex;
   justify-content: space-between;
@@ -32,4 +36,8 @@ button {
 output, button {
   font-family: 'Bungee';
   font-weight: bold;
+}
+
+.invalid {
+  color: red;
 }
