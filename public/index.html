@@ -52,7 +52,7 @@
 
     <header class="profile-header">
       <div>
-        <img src="/images/profile-hex.png">
+        <img src="/images/profile-hex.png" alt="user's profile picture">
       </div>
 
       <br>
@@ -64,6 +64,8 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
+
+      <!-- New tweet section -->
       <section class="new-tweet">
         <form method="POST" action="/tweets/">
           <label for="tweet-text">What are you humming about?</label>
@@ -74,12 +76,13 @@
           </div>
         </form>
       </section>
-
+      
+      <!-- Individual tweet section/ article -->
       <section>
         <article class="tweet">
           <header>
             <div class="header-left">
-              <img src="/images/profile-hex.png">
+              <img src="/images/profile-hex.png" alt="user's profile picture">
               <p>Anna</p>
             </div>
             <p class="user-handle">@AnnaBanana</p>
