@@ -32,12 +32,37 @@ const data = [
 
 // Ensure the web page is loaded:
 $(document).ready(() => {
+  // Use the jQuery library to add an event listener for submit
+  $("form").on("submit", function (event) {
+    // Prevent the default form submission behaviour
+    event.preventDefault();
+
+    const formData = $(this).serialize();
+
+     $.ajax({
+       method: "POST",
+       url: "/tweets",
+       data: formData,
+       success: function (res) {
+         // Handle the success response from the server
+         console.log("Tweet submitted successfully:", res);
+       },
+       // If an error occurred, log the issue
+       error: (error) => {
+         console.error(
+           `Error Encountered: ${error.status} - ${error.statusText}`
+         );
+       },
+     });
+  });
+
+ 
+
   // Takes in an array of tweets objects and appends each one to the #tweets-container
   const renderTweets = function(tweets) {
     for (const tweet of tweets) {
       $(".tweets-container").append(createTweetElement(tweet));
     }
-
   };
 
   // Generate the DOM structure for a tweet, given a tweet object
