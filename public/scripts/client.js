@@ -7,22 +7,41 @@
 // Ensure the web page is loaded:
 $(document).ready(() => {
   // Use the jQuery library to add an event listener for submit
-  $("form").on("submit", function (event) {
+  $("form").on("submit", function(event) {
     // Prevent the default form submission behaviour
     event.preventDefault();
 
+    // Convert form value into a query string format
+    // (easier to send via HTTP requests)
     const formData = $(this).serialize();
+
+    // Capture val in text are for form validation
+    const newTweet = $(event.currentTarget).find("#tweet-text").val();
+
+    // Check if the tweet exceeds the character limit
+    if (newTweet.length > 140) {
+      // Display an error message
+      alert("Tweet exceeds 140 characters");
+      return;
+    }
+
+    // Check if text area is empty
+    if ($("#tweet-text").val() === "") {
+      // Display an error message
+      alert("Please share your thoughts...");
+      return;
+    }
 
     $.ajax({
       method: "POST",
       url: "/tweets",
       data: formData,
-      success: function (res) {
+      success: function() {
         // Render new tweet
         loadTweets();
       },
       // If an error occurred, log the issue
-      error: function (error) {
+      error: function(error) {
         console.error(
           `Error Encountered: ${error.status} - ${error.statusText}`
         );
@@ -30,12 +49,12 @@ $(document).ready(() => {
     });
   });
 
-  const loadTweets = function () {
+  const loadTweets = function() {
     $.ajax({
       method: "GET",
       url: "http://localhost:8080/tweets",
       dataType: "json",
-      success: function (res) {
+      success: function(res) {
         renderTweets(res);
 
         // Clear the text area after posting a new tweet
@@ -45,7 +64,7 @@ $(document).ready(() => {
         $(".counter").val("140");
       },
       // If an error occurred, log the issue
-      error: function (error) {
+      error: function(error) {
         console.error(
           `Error Encountered: ${error.status} - ${error.statusText}`
         );
@@ -54,7 +73,7 @@ $(document).ready(() => {
   };
 
   // Takes in an array of tweets objects and appends each one to the #tweets-container
-  const renderTweets = function (tweets) {
+  const renderTweets = function(tweets) {
     $(".tweets-container").empty();
     const reversedTweets = tweets.reverse();
     for (const tweet of reversedTweets) {
@@ -63,7 +82,7 @@ $(document).ready(() => {
   };
 
   // Generate the DOM structure for a tweet, given a tweet object
-  const createTweetElement = function (data) {
+  const createTweetElement = function(data) {
     const formatedDate = timeago.format(data.created_at);
     const $tweet = $(`
         <article class="tweet">
