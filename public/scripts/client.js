@@ -48,8 +48,9 @@ $(document).ready(() => {
   };
 
   // Takes in an array of tweets objects and appends each one to the #tweets-container
-  const renderTweets = function(tweets) {
-    for (const tweet of tweets) {
+  const renderTweets = function (tweets) {
+    const reversedTweets = tweets.reverse();
+    for (const tweet of reversedTweets) {
       $(".tweets-container").append(createTweetElement(tweet));
     }
   };
