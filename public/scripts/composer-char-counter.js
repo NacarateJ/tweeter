@@ -17,7 +17,7 @@ $(document).ready(function () {
     const counter = $(this).siblings("div").find(".counter").text(remaining);
 
     // Change color to red if users exceed the 140 character limit
-    if (remaining <= 0) {
+    if (remaining < 0) {
       counter.addClass("invalid");
     } else {
       counter.removeClass("invalid");
