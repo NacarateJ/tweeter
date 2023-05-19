@@ -37,9 +37,24 @@ $(document).ready(() => {
       url: "/tweets",
       data: formData,
       success: function() {
-        // Render new tweet
-        loadTweets();
+        $.ajax({
+          method: "GET",
+          url: "http://localhost:8080/tweets",
+          dataType: "json",
+          success: function(res) {
+            $(".tweets-container").prepend(
+              createTweetElement(res[res.length - 1])
+            );
+
+            // Clear the text area after posting a new tweet
+            $("#tweet-text").val("");
+
+            // Set the counter back to 140 after posting a new tweet
+            $(".counter").val("140");
+          }
+        });
       },
+
       // If an error occurred, log the issue
       error: function(error) {
         console.error(
@@ -56,12 +71,6 @@ $(document).ready(() => {
       dataType: "json",
       success: function(res) {
         renderTweets(res);
-
-        // Clear the text area after posting a new tweet
-        $("#tweet-text").val("");
-
-        // Set the counter back to 140 after posting a new tweet
-        $(".counter").val("140");
       },
       // If an error occurred, log the issue
       error: function(error) {
@@ -74,7 +83,6 @@ $(document).ready(() => {
 
   // Takes in an array of tweets objects and appends each one to the #tweets-container
   const renderTweets = function(tweets) {
-    $(".tweets-container").empty();
     const reversedTweets = tweets.reverse();
     for (const tweet of reversedTweets) {
       $(".tweets-container").append(createTweetElement(tweet));
