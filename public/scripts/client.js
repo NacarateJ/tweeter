@@ -15,7 +15,7 @@ $(document).ready(() => {
     // (easier to send via HTTP requests)
     const formData = $(this).serialize();
 
-    // Capture val in text are for form validation
+    // Capture val in text area for form validation
     const newTweet = $(event.currentTarget).find("#tweet-text").val();
 
     // Check if the tweet exceeds the character limit
@@ -89,6 +89,14 @@ $(document).ready(() => {
     }
   };
 
+  // Returns an escaped version of a str to ensure that any
+  // special characters or HTML entities present in the input string are properly encoded
+  const escape = function(str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+
   // Generate the DOM structure for a tweet, given a tweet object
   const createTweetElement = function(data) {
     const formatedDate = timeago.format(data.created_at);
@@ -101,7 +109,7 @@ $(document).ready(() => {
             </div>
             <p class="user-handle">${data.user.handle}</p>
           </header>
-          <p class="text">${data.content.text}</p>
+          <p class="text">${escape(data.content.text)}</p>
           <footer>
             <p class="time">${formatedDate}</p>
              <div class="icons">
