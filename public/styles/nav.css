@@ -24,7 +24,7 @@ nav span {
   text-decoration: none;
 }
 
-.fa-solid {
+.nav-icon {
   color: #dc3f30;
   animation: iconAnimation 1.5s infinite;
 }
