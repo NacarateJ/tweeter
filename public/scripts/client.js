@@ -37,6 +37,12 @@ $(document).ready(() => {
       dataType: "json",
       success: function (res) {
         renderTweets(res);
+
+        // Clear the text area after posting a new tweet
+        $("#tweet-text").val("");
+
+        // Set the counter back to 140 after posting a new tweet
+        $(".counter").val("140");
       },
       // If an error occurred, log the issue
       error: function (error) {
