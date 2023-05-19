@@ -23,3 +23,17 @@ nav span {
   color: #FFFFFF;
   text-decoration: none;
 }
+
+.fa-solid {
+  color: #dc3f30;
+  animation: iconAnimation 1.5s infinite;
+}
+
+@keyframes iconAnimation {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(10px) scale(1.1);
+  }
+}
