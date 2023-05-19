@@ -56,6 +56,7 @@ $(document).ready(() => {
 
   // Generate the DOM structure for a tweet, given a tweet object
   const createTweetElement = function (data) {
+    const formatedDate = timeago.format(data.created_at);
     const $tweet = $(`
         <article class="tweet">
           <header>
@@ -67,7 +68,7 @@ $(document).ready(() => {
           </header>
           <p class="text">${data.content.text}</p>
           <footer>
-            <p class="time">${data.created_at}</p>
+            <p class="time">${formatedDate}</p>
              <div class="icons">
               <i class="fa-solid fa-flag" />
               <i class="fa-sharp fa-solid fa-retweet" />
