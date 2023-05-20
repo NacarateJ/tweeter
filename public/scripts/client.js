@@ -18,17 +18,21 @@ $(document).ready(() => {
     // Capture val in text area for form validation
     const newTweet = $(event.currentTarget).find("#tweet-text").val();
 
+
+    // Hide the error message element
+    $(".error-message").slideUp();
+
     // Check if the tweet exceeds the character limit
     if (newTweet.length > 140) {
       // Display an error message
-      alert("Tweet exceeds 140 characters");
+      $(".error-message.too-long").slideDown();
       return;
     }
 
     // Check if text area is empty
     if ($("#tweet-text").val() === "") {
       // Display an error message
-      alert("Please share your thoughts...");
+      $(".error-message.empty-val").slideDown();
       return;
     }
 
@@ -36,12 +40,12 @@ $(document).ready(() => {
       method: "POST",
       url: "/tweets",
       data: formData,
-      success: function() {
+      success: function () {
         $.ajax({
           method: "GET",
           url: "http://localhost:8080/tweets",
           dataType: "json",
-          success: function(res) {
+          success: function (res) {
             $(".tweets-container").prepend(
               createTweetElement(res[res.length - 1])
             );
@@ -51,12 +55,12 @@ $(document).ready(() => {
 
             // Set the counter back to 140 after posting a new tweet
             $(".counter").val("140");
-          }
+          },
         });
       },
 
       // If an error occurred, log the issue
-      error: function(error) {
+      error: function (error) {
         console.error(
           `Error Encountered: ${error.status} - ${error.statusText}`
         );
