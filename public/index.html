@@ -70,6 +70,15 @@
 
       <!-- New tweet section -->
       <section class="new-tweet">
+        
+        <div>
+          <h3 class="error-message too-long">Too long, you can't have mote than 140 char...</h>
+        </div>   
+
+        <div>
+          <h3 class="error-message empty-val">Don't be shy, share your thoughts...</h>
+        </div>
+        
         <form method="POST" action="/tweets/">
           <label for="tweet-text">What are you humming about?</label>
           <textarea name="text" id="tweet-text"></textarea>
