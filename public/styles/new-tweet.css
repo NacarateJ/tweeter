@@ -33,7 +33,7 @@ button {
   padding: 0.3em;
 }
 
-output, button {
+output, .tweet-but {
   font-family: 'Bungee';
   font-weight: bold;
 }
