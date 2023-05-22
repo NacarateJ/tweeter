@@ -1,0 +1,15 @@
+.up-but {
+  background-color: #dc3f30;
+  color: #FFFFFF;
+  border: none;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.up-but:hover {
+  cursor: pointer;
+}
