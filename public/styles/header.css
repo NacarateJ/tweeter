@@ -5,6 +5,10 @@
   align-items: center;
   background-color: #eda745;
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
-  height: 720px;
+  height: 520px;
   width: 100vw;
+}
+
+.profile-img {
+  margin-top: 120px;
 }
