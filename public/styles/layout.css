@@ -32,6 +32,7 @@ body {
   font-family: 'Bungee', cursive;
 }
 
+/* Page-specific (main) content */
 .container {
   width: 90%;
   background-color: #f4f1ec;
