@@ -21,6 +21,12 @@ nav span {
 
 .nav-txt {
   color: #FFFFFF;
+  background-color: #4056A1;
+  border: none;
+}
+
+.nav-txt:hover {
+  cursor: pointer;
 }
 
 .nav-icon {
