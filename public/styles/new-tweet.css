@@ -1,3 +1,7 @@
+.new-tweet {
+  display: none;
+}
+
 form {
   display: flex;
   flex-direction: column;
@@ -26,11 +30,15 @@ div {
   margin-top: 1em;
 }
 
-button {
+.tweet-but {
   color: #FFFFFF;
   background-color: #4056A1;
   border: none;
   padding: 0.3em;
+}
+
+.tweet-but:hover {
+  cursor: pointer;
 }
 
 output, .tweet-but {
