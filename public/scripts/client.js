@@ -6,6 +6,15 @@
 
 // Ensure the web page is loaded:
 $(document).ready(() => {
+  // Show new tweet form
+   $(".nav-txt").on("click", function (event) {
+     // Prevent the default behaviour for the button click
+     event.preventDefault();
+
+     // Show new tweet form
+     $(".new-tweet").slideDown();
+   });
+
   // Use the jQuery library to add an event listener for submit
   $("form").on("submit", function(event) {
     // Prevent the default form submission behaviour
@@ -17,7 +26,6 @@ $(document).ready(() => {
 
     // Capture val in text area for form validation
     const newTweet = $(event.currentTarget).find("#tweet-text").val();
-
 
     // Hide the error message element
     $(".error-message").slideUp();
@@ -34,6 +42,11 @@ $(document).ready(() => {
       // Display an error message
       $(".error-message.empty-val").slideDown();
       return;
+    }
+
+    //  Hide new tweet form after submition
+    if (newTweet.length <= 140 && $("#tweet-text").val() !== "") {
+      $(".new-tweet").slideUp();
     }
 
     $.ajax({
