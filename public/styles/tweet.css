@@ -1,6 +1,6 @@
 .tweet {
   display: flex;
-  flex-flow: column wrap;
+  flex-direction: column;
   border: 5px solid #545149;
   padding: 1em 0.5em 1em 0.5em;
   margin-top: 2em;
@@ -36,8 +36,6 @@ article.tweet img {
 
 .text {
  padding: 0 0.5em 0 0.5em;
- word-wrap: break-word;
- width: 35em;
 }
 
 article.tweet footer {
