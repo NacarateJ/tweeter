@@ -3,30 +3,25 @@
   .mq-desktop {
     margin-top: 0;
   }
-
   .profile-header {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #eda745;
-  background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
-  height: 520px;
-  width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #eda745;
+    background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+    height: 520px;
+    width: 100vw;
+  }
+  .profile-img {
+    margin-bottom: 1em;
+  }
+  .user-name {
+    color: #FFFFFF;
+    font-weight: 300;
+    margin: 0;
+  }
 }
-
-.profile-img {
-  margin-bottom: 1em;
-}
-
-.user-name {
-  color: #FFFFFF;
-  font-weight: normal;
-  margin: 0;
-}
-
-}
-
 /* media query for desktop */
 @media only screen and (min-width: 1224px) {
   .mq-desktop {
@@ -34,16 +29,13 @@
     justify-content: left;
     margin-left: 2em;
   }
-
   .profile-header {
     height: 350px;
     width: 35vw;
     position: fixed;
-    top:8em
+    top: 8em;
   }
-
   .profile-img {
     margin-top: 0;
   }
-
 }

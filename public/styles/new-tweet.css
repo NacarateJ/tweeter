@@ -21,7 +21,7 @@ textarea {
 }
 
 textarea:focus {
-    outline: none;
+  outline: none;
 }
 
 div {
@@ -42,7 +42,7 @@ div {
 }
 
 output, .tweet-but {
-  font-family: 'Bungee';
+  font-family: "Bungee";
   font-weight: bold;
 }
 

@@ -7,7 +7,7 @@
 }
 
 .tweet:hover {
-  box-shadow: 10px 10px 0px 0px rgba(214,217,229);
+  box-shadow: 10px 10px 0px 0px rgb(214, 217, 229);
 }
 
 article.tweet header, footer {
@@ -17,8 +17,8 @@ article.tweet header, footer {
   padding: 0 0.5em 0 0.5em;
 }
 
-.header-left, 
-.time, 
+.header-left,
+.time,
 .icons {
   margin: 0;
 }
@@ -35,7 +35,7 @@ article.tweet img {
 }
 
 .text {
- padding: 0 0.5em 0 0.5em;
+  padding: 0 0.5em 0 0.5em;
 }
 
 article.tweet footer {
@@ -52,5 +52,5 @@ article.tweet footer {
 }
 
 .icons i:hover {
-    color: #eda745;
+  color: #eda745;
 }
