@@ -1,0 +1,60 @@
+.new-tweet {
+  display: none;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 1em 0 1em 0;
+}
+
+label {
+  font-weight: bold;
+}
+
+textarea {
+  border: none;
+  border-bottom: 5px solid #545149;
+  background-color: #f4f1ec;
+  resize: none;
+}
+
+textarea:focus {
+    outline: none;
+}
+
+div {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1em;
+}
+
+.tweet-but {
+  color: #FFFFFF;
+  background-color: #4056A1;
+  border: none;
+  padding: 0.3em;
+}
+
+.tweet-but:hover {
+  cursor: pointer;
+}
+
+output, .tweet-but {
+  font-family: 'Bungee';
+  font-weight: bold;
+}
+
+.invalid {
+  color: red;
+}
+
+.error-message {
+  display: none;
+  color: red;
+  padding: 0.5em;
+  width: 100%;
+  text-align: center;
+  border: 3px solid red;
+}

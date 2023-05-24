@@ -1,0 +1,57 @@
+/* media query for tablet */
+@media only screen and (min-width: 768px) {
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    height: 120px;
+    width: 100vw;
+    padding: 0 1.5em 0 1.5em;
+}
+
+nav span {
+    color: #FFFFFF;
+}
+
+.nav-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-txt {
+  color: #FFFFFF;
+  background-color: #eda745;
+  border: none;
+}
+
+.nav-txt:hover {
+  cursor: pointer;
+}
+
+.nav-icon {
+  color: #dc3f30;
+  animation: iconAnimation 1.5s infinite;
+}
+
+@keyframes iconAnimation {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(10px) scale(1.1);
+  }
+}
+}
+
+/* media query for desktop */
+@media only screen and (min-width: 1224px) {
+  nav {
+    background-color: #4056A1;
+  }
+
+  .nav-txt {
+    background-color: #4056A1;
+  }
+}
