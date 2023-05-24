@@ -1,9 +1,10 @@
-nav {
+/* media query for tablet */
+@media only screen and (min-width: 768px) {
+  nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
     position: fixed;
-    background-color: #4056A1;
     height: 120px;
     width: 100vw;
     padding: 0 1.5em 0 1.5em;
@@ -21,7 +22,7 @@ nav span {
 
 .nav-txt {
   color: #FFFFFF;
-  background-color: #4056A1;
+  background-color: #eda745;
   border: none;
 }
 
@@ -40,5 +41,17 @@ nav span {
   }
   50% {
     transform: translateY(10px) scale(1.1);
+  }
+}
+}
+
+/* media query for desktop */
+@media only screen and (min-width: 1224px) {
+  nav {
+    background-color: #4056A1;
+  }
+
+  .nav-txt {
+    background-color: #4056A1;
   }
 }
