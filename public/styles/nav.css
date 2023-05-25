@@ -6,14 +6,14 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: fixed;
     height: 120px;
     width: 100vw;
     padding: 0 1.5em 0 1.5em;
+    background-color: #eda745;
+    color: #FFFFFF;
   }
   nav span {
     font-family: "Bungee", "sans-serif";
-    color: #FFFFFF;
   }
   nav .nav-right {
     display: flex;
@@ -45,6 +45,7 @@
 /* media query for desktop */
 @media only screen and (min-width: 1224px) {
   nav {
+    position: fixed;
     top: 0;
     background-color: #4056A1;
   }
