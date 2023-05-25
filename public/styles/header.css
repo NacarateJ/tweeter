@@ -5,7 +5,7 @@
   .mq-desktop {
     margin-top: 0;
   }
-  .profile-header {
+  .mq-desktop .profile-header {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -15,12 +15,12 @@
     height: 520px;
     width: 100vw;
   }
-  .profile-img {
+  .mq-desktop .profile-header .profile-img {
     margin-bottom: 1em;
   }
-  .user-name {
+  .mq-desktop .profile-header .profile-name {
     color: #FFFFFF;
-    font-weight: 300;
+    font-weight: 400;
     margin: 0;
   }
 }
@@ -31,13 +31,13 @@
     justify-content: left;
     margin-left: 2em;
   }
-  .profile-header {
+  .mq-desktop .profile-header {
     height: 350px;
     width: 35vw;
     position: fixed;
     top: 8em;
   }
-  .profile-img {
+  .mq-desktop .profile-header .profile-img {
     margin-top: 0;
   }
 }

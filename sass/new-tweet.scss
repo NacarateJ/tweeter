@@ -5,67 +5,70 @@
   /* Page-specific (main) content */
   .container {
     width: 90%;
-  }
+    
+    .invalid {
+      color: $red;
+    }
+  
+    .error-message {
+      display: none;
+      color: $red;
+      padding: 0.5em;
+      width: 100%;
+      text-align: center;
+      border: 3px solid $red;
+    }
 
-  .new-tweet {
-  display: none;
-  }
-
-  form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 1em 0 1em 0;
-  }
-
-  label {
-    font-weight: $font-body-semibold;
-  }
-
-  textarea {
-    border: none;
-    border-bottom: 5px solid $dark-grey;
-    background-color: $backgroung-body;
-    resize: none;
-  }
-
-  textarea:focus {
-    outline: none;
-  }
-
-  div {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 1em;
-  }
-
-  .tweet-but {
-    color: $white;
-    background-color: $backgroung-nav;
-    border: none;
-    padding: 0.3em;
-  }
-
-  .tweet-but:hover {
-    cursor: pointer;
-  }
-
-  output, .tweet-but {
-    font-family: $font-logo, $font-fall-back;
-    font-weight: $font-logo-regular;
-  }
-
-  .invalid {
-    color: $red;
-  }
-
-  .error-message {
+    .new-tweet {
     display: none;
-    color: $red;
-    padding: 0.5em;
-    width: 100%;
-    text-align: center;
-    border: 3px solid $red;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 1em 0 1em 0;
+  
+      label {
+        font-weight: $font-body-semibold;
+        margin-bottom: 1em;
+      }
+  
+      #tweet-text {
+        padding-bottom: 1em;
+        border: none;
+        border-bottom: 5px solid $dark-grey;
+        background-color: $backgroung-body;
+        resize: none;
+    
+        &:focus {
+          outline: none;
+        }
+      }
+
+      div {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 1em;
+    
+        .tweet-but {
+          color: $white;
+          background-color: $backgroung-nav;
+          border: none;
+          padding: 0.3em;
+          
+          &:hover {
+            cursor: pointer;
+          }
+        }
+    
+        .counter, .tweet-but {
+          font-family: $font-logo, $font-fall-back;
+          font-weight: $font-logo-regular;
+        }
+      }
+    }
+
   }
 }
 

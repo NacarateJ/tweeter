@@ -10,53 +10,55 @@
     height: 120px;
     width: 100vw;
     padding: 0 1.5em 0 1.5em;
-  }
 
-  nav span {
-    font-family: $font-logo, $font-fall-back;
-    color: $white;
-  }
-
-  .nav-right {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .nav-txt {
-    color: $white;
-    background-color: $backgroung-header;
-    border: none;
-  }
-
-  .nav-txt:hover {
-    cursor: pointer;
-  }
-
-  .nav-icon {
-    color: $red;
-    animation: iconAnimation 1.5s infinite;
-  }
-
-  @keyframes iconAnimation {
-    0% {
-      transform: translateY(0) scale(1);
+    span {
+      font-family: $font-logo, $font-fall-back;
+      color: $white;
     }
-    
-    50% {
-      transform: translateY(10px) scale(1.1);
+
+    .nav-right {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .nav-txt {
+        color: $white;
+        background-color: $backgroung-header;
+        border: none;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      .nav-icon {
+        color: $red;
+        animation: iconAnimation 1.5s infinite;
+      }
+    }
+
+    @keyframes iconAnimation {
+      0% {
+        transform: translateY(0) scale(1);
+      }
+      
+      50% {
+        transform: translateY(10px) scale(1.1);
+      }
     }
   }
 }
+
 
 /* media query for desktop */
 @media only screen and (min-width: 1224px) {
   nav {
     top: 0;
     background-color: $backgroung-nav;
-  }
-
-  .nav-txt {
-    background-color: $backgroung-nav;
+    
+    .nav-right {
+      .nav-txt {
+        background-color: $backgroung-nav;
+      }
+    }
   }
 }

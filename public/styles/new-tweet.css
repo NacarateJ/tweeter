@@ -6,55 +6,57 @@
   .container {
     width: 90%;
   }
-  .new-tweet {
-    display: none;
-  }
-  form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 1em 0 1em 0;
-  }
-  label {
-    font-weight: 600;
-  }
-  textarea {
-    border: none;
-    border-bottom: 5px solid #545149;
-    background-color: #f4f1ec;
-    resize: none;
-  }
-  textarea:focus {
-    outline: none;
-  }
-  div {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 1em;
-  }
-  .tweet-but {
-    color: #FFFFFF;
-    background-color: #4056A1;
-    border: none;
-    padding: 0.3em;
-  }
-  .tweet-but:hover {
-    cursor: pointer;
-  }
-  output, .tweet-but {
-    font-family: "Bungee", "sans-serif";
-    font-weight: 400;
-  }
-  .invalid {
+  .container .invalid {
     color: #dc3f30;
   }
-  .error-message {
+  .container .error-message {
     display: none;
     color: #dc3f30;
     padding: 0.5em;
     width: 100%;
     text-align: center;
     border: 3px solid #dc3f30;
+  }
+  .container .new-tweet {
+    display: none;
+  }
+  .container form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 1em 0 1em 0;
+  }
+  .container form label {
+    font-weight: 600;
+    margin-bottom: 1em;
+  }
+  .container form #tweet-text {
+    padding-bottom: 1em;
+    border: none;
+    border-bottom: 5px solid #545149;
+    background-color: #f4f1ec;
+    resize: none;
+  }
+  .container form #tweet-text:focus {
+    outline: none;
+  }
+  .container form div {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1em;
+  }
+  .container form div .tweet-but {
+    color: #FFFFFF;
+    background-color: #4056A1;
+    border: none;
+    padding: 0.3em;
+  }
+  .container form div .tweet-but:hover {
+    cursor: pointer;
+  }
+  .container form div .counter, .container form div .tweet-but {
+    font-family: "Bungee", "sans-serif";
+    font-weight: 400;
   }
 }
 /* media query for desktop */

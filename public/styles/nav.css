@@ -15,20 +15,20 @@
     font-family: "Bungee", "sans-serif";
     color: #FFFFFF;
   }
-  .nav-right {
+  nav .nav-right {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  .nav-txt {
+  nav .nav-right .nav-txt {
     color: #FFFFFF;
     background-color: #eda745;
     border: none;
   }
-  .nav-txt:hover {
+  nav .nav-right .nav-txt:hover {
     cursor: pointer;
   }
-  .nav-icon {
+  nav .nav-right .nav-icon {
     color: #dc3f30;
     animation: iconAnimation 1.5s infinite;
   }
@@ -47,7 +47,7 @@
     top: 0;
     background-color: #4056A1;
   }
-  .nav-txt {
+  nav .nav-right .nav-txt {
     background-color: #4056A1;
   }
 }

@@ -7,52 +7,48 @@
   padding: 1em 0.5em 1em 0.5em;
   margin-top: 2em;
 }
-
 .tweet:hover {
   box-shadow: 10px 10px 0px 0px #d6d9e5;
 }
-
-article.tweet header, footer {
+.tweet header, .tweet footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 0.5em 0 0.5em;
 }
-
-.header-left,
-.time,
-.icons {
+.tweet header .user-handle, .tweet footer .user-handle {
+  color: #d6d9e5;
+  font-weight: 600;
+}
+.tweet header .header-left,
+.tweet header .time,
+.tweet header .icons, .tweet footer .header-left,
+.tweet footer .time,
+.tweet footer .icons {
   margin: 0;
 }
-
-article.tweet img {
+.tweet .header-left {
+  display: flex;
+}
+.tweet .header-left img {
   width: 3em;
   height: 3em;
   margin-right: 0.5em;
 }
-
-.user-handle {
-  color: #d6d9e5;
-  font-weight: 600;
-}
-
-.text {
+.tweet .text {
   padding: 0 0.5em 0 0.5em;
 }
-
-article.tweet footer {
+.tweet footer {
   border-top: 5px solid #545149;
   height: 2.5em;
 }
-
-.icons {
+.tweet footer .icons {
+  display: flex;
   gap: 1em;
 }
-
-.icons i {
+.tweet footer .icons i {
   color: #4056A1;
 }
-
-.icons i:hover {
+.tweet footer .icons i:hover {
   color: #eda745;
 }
