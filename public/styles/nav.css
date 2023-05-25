@@ -6,10 +6,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: fixed;
+    top: 0;
     height: 120px;
     width: 100vw;
     padding: 0 1.5em 0 1.5em;
-    background-color: #eda745;
     color: #FFFFFF;
   }
   nav span {
@@ -45,8 +46,6 @@
 /* media query for desktop */
 @media only screen and (min-width: 1224px) {
   nav {
-    position: fixed;
-    top: 0;
     background-color: #4056A1;
   }
   nav .nav-right .nav-txt {

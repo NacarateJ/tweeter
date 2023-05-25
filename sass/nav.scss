@@ -7,10 +7,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: fixed;
+    top: 0;
     height: 120px;
     width: 100vw;
     padding: 0 1.5em 0 1.5em;
-    background-color: $backgroung-header;
     color: $white;
 
     span {
@@ -51,8 +52,6 @@
 /* media query for desktop */
 @media only screen and (min-width: 1224px) {
   nav {
-    position: fixed;
-    top: 0;
     background-color: $backgroung-nav;
     
     .nav-right {
