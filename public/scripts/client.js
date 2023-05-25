@@ -7,12 +7,11 @@
 // Ensure the web page is loaded:
 $(document).ready(() => {
   // Show new tweet form
-   $(".nav-txt").on("click", function (event) {
-     // Prevent the default behaviour for the button click
-     event.preventDefault();
-
-     // Show new tweet form
-     $(".new-tweet").slideDown();
+  $(".nav-txt").on("click", function (event) {
+    // Prevent the default behaviour for the button click
+    event.preventDefault();
+    // Show new tweet form
+    $(".new-tweet").slideDown();
    });
 
   // Use the jQuery library to add an event listener for submit
