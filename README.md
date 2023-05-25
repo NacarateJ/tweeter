@@ -12,7 +12,7 @@ It allows users to create short posts of up to 140 characters and appends them t
 * Using `SASS` CSS preprocessor to make `CSS` code more efficient and maintainable
 * Form toggle - Using `jQuery` methods to hide or show form on the "Write a new Tweet" button click
 * Toggle button - Using `jQuery` methods
-    * The toggle button is shown on the page when the user starts scrolling through the tweets and the navigation button disappears
+    * The toggle button is shown in the lower right-hand corner the page when the user starts scrolling through the tweets and the navigation button disappears
     * The toggle button is hidden and the navigation button reappears when the user scrolls back to the top
     * When clicked, the page scrolls to the top, and the form slides down with the textarea enabled
 
