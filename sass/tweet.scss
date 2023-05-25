@@ -1,13 +1,15 @@
+@import 'variables';
+
 .tweet {
   display: flex;
   flex-direction: column;
-  border: 5px solid #545149;
+  border: 5px solid $dark-grey;
   padding: 1em 0.5em 1em 0.5em;
   margin-top: 2em;
 }
 
 .tweet:hover {
-  box-shadow: 10px 10px 0px 0px rgba(214,217,229);
+  box-shadow: 10px 10px 0px 0px $light-grey;
 }
 
 article.tweet header, footer {
@@ -30,8 +32,8 @@ article.tweet img {
 }
 
 .user-handle {
-  color: #d6d9e5;
-  font-weight: bold;
+  color: $light-grey;
+  font-weight: $font-body-semibold;
 }
 
 .text {
@@ -39,7 +41,7 @@ article.tweet img {
 }
 
 article.tweet footer {
-  border-top: 5px solid #545149;
+  border-top: 5px solid $dark-grey;
   height: 2.5em;
 }
 
@@ -48,9 +50,9 @@ article.tweet footer {
 }
 
 .icons i {
-  color: #4056a1;
+  color: $backgroung-nav;
 }
 
 .icons i:hover {
-    color: #eda745;
+  color: $backgroung-header;
 }

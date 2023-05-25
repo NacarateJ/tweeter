@@ -1,6 +1,8 @@
+@import 'variables';
+
 .up-but {
-  background-color: #dc3f30;
-  color: #FFFFFF;
+  background-color: $red;
+  color: $white;
   border: none;
   width: 80px;
   height: 80px;

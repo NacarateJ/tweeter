@@ -3,6 +3,9 @@
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
+
+@import 'variables';
+
 html {
   box-sizing: border-box;
 }
@@ -18,14 +21,10 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: #545149;
-  background-color: #f4f1ec;
+  color: $dark-grey;
+  background-color: $backgroung-body;
   font-size: 24px;
-  font-family: 'Source Sans Pro', sans-serif;
-}
-
-nav span {
- font-family: 'Bungee', cursive;
+  font-family: $font-body, $font-fall-back;
 }
 
 
@@ -33,27 +32,9 @@ nav span {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
-/* media query for tablet */
-@media only screen and (min-width: 768px) {
-  /* Page-specific (main) content */
-  .container {
-    width: 90%;
-  }
-}
-
 /* media query for desktop */
 @media only screen and (min-width: 1224px) {
   body {
     flex-direction: row;
-  }
-
-  nav {
-    top: 0;
-  }
-
-  .container {
-    width: 50%;
-    margin-top: 6em;
-    margin-right: 2em;
   }
 }

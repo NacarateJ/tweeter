@@ -1,3 +1,5 @@
+/* Fonts */
+/* Colors */
 .tweet {
   display: flex;
   flex-direction: column;
@@ -7,7 +9,7 @@
 }
 
 .tweet:hover {
-  box-shadow: 10px 10px 0px 0px rgb(214, 217, 229);
+  box-shadow: 10px 10px 0px 0px #d6d9e5;
 }
 
 article.tweet header, footer {
@@ -31,7 +33,7 @@ article.tweet img {
 
 .user-handle {
   color: #d6d9e5;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .text {
@@ -48,7 +50,7 @@ article.tweet footer {
 }
 
 .icons i {
-  color: #4056a1;
+  color: #4056A1;
 }
 
 .icons i:hover {
