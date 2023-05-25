@@ -12,7 +12,7 @@
     align-items: center;
     background-color: #eda745;
     background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
-    height: 520px;
+    height: 400px;
     width: 100vw;
   }
   .mq-desktop .profile-header .profile-img {
