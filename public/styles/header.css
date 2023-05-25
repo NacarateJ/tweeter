@@ -1,31 +1,29 @@
 /* Fonts */
 /* Colors */
-/* media query for tablet */
-@media only screen and (min-width: 768px) {
-  .mq-desktop {
-    margin-top: 0;
-  }
-  .mq-desktop .profile-header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #eda745;
-    background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
-    height: 520px;
-    width: 100vw;
-  }
-  .mq-desktop .profile-header .profile-img {
-    margin-bottom: 1em;
-  }
-  .mq-desktop .profile-header .profile-name {
-    color: #FFFFFF;
-    font-weight: 400;
-    margin: 0;
-  }
+.mq-desktop {
+  margin-top: 0;
 }
+.mq-desktop .profile-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #eda745;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+  height: 520px;
+  width: 100vw;
+}
+.mq-desktop .profile-header .profile-img {
+  margin-bottom: 1em;
+}
+.mq-desktop .profile-header .profile-name {
+  color: #FFFFFF;
+  font-weight: 400;
+  margin: 0;
+}
+
 /* media query for desktop */
-@media only screen and (min-width: 1224px) {
+@media only screen and (min-width: 1024px) {
   .mq-desktop {
     width: 50vw;
     justify-content: left;

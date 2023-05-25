@@ -16,25 +16,23 @@ html {
 /*
  * Global layout stuff
  */
-/* media query for tablet */
-@media only screen and (min-width: 768px) {
-  body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: #545149;
-    background-color: #f4f1ec;
-    font-size: 24px;
-    font-family: "Source Sans Pro", "sans-serif";
-    /* Page-specific (main) content */
-  }
-  body .container {
-    width: 90%;
-  }
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #545149;
+  background-color: #f4f1ec;
+  font-size: 24px;
+  font-family: "Source Sans Pro", "sans-serif";
+  /* Page-specific (main) content */
 }
+body .container {
+  width: 90%;
+}
+
 /* media query for desktop */
-@media only screen and (min-width: 1224px) {
+@media only screen and (min-width: 1024px) {
   body {
     flex-direction: row;
   }

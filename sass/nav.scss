@@ -1,56 +1,54 @@
 @import 'variables';
 @import 'mixins';
 
-/* media query for tablet */
-@media only screen and (min-width: 768px) {
-  nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: fixed;
-    top: 0;
-    height: 120px;
-    width: 100vw;
-    padding: 0 1.5em 0 1.5em;
-    color: $white;
 
-    span {
-      font-family: $font-logo, $font-fall-back;
-    }
+// Styles for smaller screens up to 1023px
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  height: 120px;
+  width: 100vw;
+  padding: 0 1.5em 0 1.5em;
+  color: $white;
+  span {
+    font-family: $font-logo, $font-fall-back;
+  }
 
-    .nav-right {
-      @include vertical-align;
+  .nav-right {
+    @include vertical-align;
 
-      .nav-txt {
-        color: $white;
-        background-color: $backgroung-header;
-        border: none;
-        &:hover {
-          cursor: pointer;
-        }
-      }
-
-      .nav-icon {
-        color: $red;
-        animation: iconAnimation 1.5s infinite;
+    .nav-txt {
+      color: $white;
+      background-color: $backgroung-header;
+      border: none;
+      &:hover {
+        cursor: pointer;
       }
     }
 
-    @keyframes iconAnimation {
-      0% {
-        transform: translateY(0) scale(1);
-      }
-      
-      50% {
-        transform: translateY(10px) scale(1.1);
-      }
+    .nav-icon {
+      color: $red;
+      animation: iconAnimation 1.5s infinite;
+    }
+  }
+  
+  @keyframes iconAnimation {
+    0% {
+      transform: translateY(0) scale(1);
+    }
+    
+    50% {
+      transform: translateY(10px) scale(1.1);
     }
   }
 }
 
 
 /* media query for desktop */
-@media only screen and (min-width: 1224px) {
+@media only screen and (min-width: 1024px) {
   nav {
     background-color: $backgroung-nav;
     

@@ -18,26 +18,23 @@ html {
  * Global layout stuff
  */
 
-
- /* media query for tablet */
- @media only screen and (min-width: 768px) {
-  body {
-    @include vertical-align;
-
-    color: $dark-grey;
-    background-color: $backgroung-body;
-    font-size: 24px;
-    font-family: $font-body, $font-fall-back;
-   
-    /* Page-specific (main) content */
-    .container {
-      width: 90%;
-    }
+// Styles for smaller screens up to 1023px
+body {
+  @include vertical-align;
+  
+  color: $dark-grey;
+  background-color: $backgroung-body;
+  font-size: 24px;
+  font-family: $font-body, $font-fall-back;
+ 
+  /* Page-specific (main) content */
+  .container {
+    width: 90%;
   }
 }
 
 /* media query for desktop */
-@media only screen and (min-width: 1224px) {
+@media only screen and (min-width: 1024px) {
   body {
     flex-direction: row;
 
