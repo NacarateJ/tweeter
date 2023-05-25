@@ -5,6 +5,7 @@
  */
 
 @import 'variables';
+@import 'mixins';
 
 html {
   box-sizing: border-box;
@@ -17,24 +18,33 @@ html {
  * Global layout stuff
  */
 
-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: $dark-grey;
-  background-color: $backgroung-body;
-  font-size: 24px;
-  font-family: $font-body, $font-fall-back;
+
+ /* media query for tablet */
+ @media only screen and (min-width: 768px) {
+  body {
+    @include vertical-align;
+
+    color: $dark-grey;
+    background-color: $backgroung-body;
+    font-size: 24px;
+    font-family: $font-body, $font-fall-back;
+   
+    /* Page-specific (main) content */
+    .container {
+      width: 90%;
+    }
+  }
 }
-
-
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
 
 /* media query for desktop */
 @media only screen and (min-width: 1224px) {
   body {
     flex-direction: row;
+
+    .container {
+    width: 50%;
+    margin-top: 6em;
+    margin-right: 2em;
+  }
   }
 }
