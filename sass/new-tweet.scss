@@ -1,82 +1,66 @@
 @import 'variables';
-
-/* media query for tablet */
-@media only screen and (min-width: 768px) {
-  /* Page-specific (main) content */
-  .container {
-    width: 90%;
     
-    .invalid {
-      color: $red;
-    }
+.new-tweet {
+  display: none;
   
-    .error-message {
-      display: none;
-      color: $red;
-      padding: 0.5em;
-      width: 100%;
-      text-align: center;
-      border: 3px solid $red;
-    }
-
-    .new-tweet {
+  .invalid {
+    color: $red;
+  }
+  
+  .error-message {
     display: none;
-    }
+    color: $red;
+    margin-top: 1.7em;
+    padding: 0.5em;
+    width: 100%;
+    text-align: center;
+    border: 3px solid $red;
+  }
 
-    form {
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 2em 0 1em 0;
+  
+    label {
+      font-weight: $font-body-semibold;
+      margin-bottom: 1em;
+    }
+  
+    #tweet-text {
+      padding-bottom: 1em;
+      border: none;
+      border-bottom: 5px solid $dark-grey;
+      background-color: $backgroung-body;
+      resize: none;
+  
+      &:focus {
+        outline: none;
+      }
+    }
+  
+    div {
       display: flex;
-      flex-direction: column;
-      justify-content: center;
-      margin: 1em 0 1em 0;
+      justify-content: space-between;
+      margin-top: 1em;
   
-      label {
-        font-weight: $font-body-semibold;
-        margin-bottom: 1em;
-      }
-  
-      #tweet-text {
-        padding-bottom: 1em;
+      .tweet-but {
+        color: $white;
+        background-color: $backgroung-nav;
         border: none;
-        border-bottom: 5px solid $dark-grey;
-        background-color: $backgroung-body;
-        resize: none;
-    
-        &:focus {
-          outline: none;
+        padding: 0.3em;
+        
+        &:hover {
+          cursor: pointer;
         }
       }
-
-      div {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 1em;
-    
-        .tweet-but {
-          color: $white;
-          background-color: $backgroung-nav;
-          border: none;
-          padding: 0.3em;
-          
-          &:hover {
-            cursor: pointer;
-          }
-        }
-    
-        .counter, .tweet-but {
-          font-family: $font-logo, $font-fall-back;
-          font-weight: $font-logo-regular;
-        }
+  
+      .counter, .tweet-but {
+        font-family: $font-logo, $font-fall-back;
+        font-weight: $font-logo-regular;
       }
     }
-
   }
 }
 
-/* media query for desktop */
-@media only screen and (min-width: 1224px) {
-  .container {
-    width: 50%;
-    margin-top: 6em;
-    margin-right: 2em;
-  }
-}
