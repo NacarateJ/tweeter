@@ -4,6 +4,7 @@
  * Do not modify these two selectors, please
  */
 /* Fonts */
+/* Fonts weight*/
 /* Colors */
 html {
   box-sizing: border-box;
@@ -37,6 +38,7 @@ body .container {
     flex-direction: row;
   }
   body .container {
+    max-width: 1024px;
     width: 50%;
     margin-top: 6em;
     margin-right: 2em;
