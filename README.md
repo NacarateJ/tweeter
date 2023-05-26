@@ -44,6 +44,10 @@ It allows users to create short posts of up to 140 characters and appends them t
 
 
 
+https://github.com/NacarateJ/tweeter/assets/114256348/c7b5ab68-11d5-4963-b06f-b2d23cc722de
+
+
+
 <div/>
 
 **Feel free to explore the code and make any modifications as needed. Enjoy using Tweeter!**
