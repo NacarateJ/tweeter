@@ -2,6 +2,7 @@
 
 .tweet {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   border: 5px solid $dark-grey;
   padding: 1em 0.5em 1em 0.5em;
@@ -32,6 +33,7 @@
 
   .header-left {
     display: flex;
+    flex-wrap: wrap;
   
     img {
       width: 3em;
@@ -43,6 +45,7 @@
 
   .text {
    padding: 0 0.5em 0 0.5em;
+   font-weight: $font-body-semibold;
   }
 
   footer {
