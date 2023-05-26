@@ -36,7 +36,7 @@ It allows users to create short posts of up to 140 characters and appends them t
 * Clone the repository to your local machine
 * Install the project dependencies by running the following command: `npm install`
 * Start the server by running the following command: `npm start`
-* Open your web browser and visit http://localhost:3000 to access the Tweeter application.
+* Open your web browser and visit http://localhost:8080 to access the Tweeter application.
 
 ## Final Product
 
