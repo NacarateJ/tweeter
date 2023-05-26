@@ -10,6 +10,7 @@
 .new-tweet .error-message {
   display: none;
   font-weight: 600;
+  overflow-wrap: break-word;
   color: #dc3f30;
   margin-top: 1.7em;
   padding: 0.5em;
