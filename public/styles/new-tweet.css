@@ -9,6 +9,7 @@
 }
 .new-tweet .error-message {
   display: none;
+  font-weight: 600;
   color: #dc3f30;
   margin-top: 1.7em;
   padding: 0.5em;

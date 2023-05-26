@@ -30,6 +30,10 @@ body {
   /* Page-specific (main) content */
   .container {
     width: 90%;
+
+    .ajax-call-error {
+      @include style-error-messages;
+    }
   }
 }
 
