@@ -4,3 +4,14 @@
   justify-content: center;
   align-items: center;
 }
+
+@mixin style-error-messages {
+  display: none;
+  font-weight: $font-body-semibold;
+  color: $red;
+  margin-top: 1.7em;
+  padding: 0.5em;
+  width: 100%;
+  text-align: center;
+  border: 3px solid $red;
+}
