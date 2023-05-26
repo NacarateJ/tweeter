@@ -46,6 +46,8 @@
   .text {
    padding: 0 0.5em 0 0.5em;
    font-weight: $font-body-semibold;
+   overflow-wrap: break-word;
+   word-break:break-all;
   }
 
   footer {

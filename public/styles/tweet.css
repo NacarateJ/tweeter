@@ -42,6 +42,8 @@
 .tweet .text {
   padding: 0 0.5em 0 0.5em;
   font-weight: 600;
+  overflow-wrap: break-word;
+  word-break: break-all;
 }
 .tweet footer {
   border-top: 5px solid #545149;
