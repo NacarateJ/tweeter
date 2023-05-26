@@ -71,11 +71,10 @@ $(document).ready(() => {
         });
       },
 
-      // If an error occurred, log the issue
+      // If an error occurred, display error message
       error: function (error) {
-        console.error(
-          `Error Encountered: ${error.status} - ${error.statusText}`
-        );
+        const errorMessage = `Error Encountered: ${error.status} - ${error.statusText}`;
+        $(".ajax-call-error").text(errorMessage).slideDown();
       },
     });
   });
@@ -88,11 +87,10 @@ $(document).ready(() => {
       success: function(res) {
         renderTweets(res);
       },
-      // If an error occurred, log the issue
-      error: function(error) {
-        console.error(
-          `Error Encountered: ${error.status} - ${error.statusText}`
-        );
+      // If an error occurred, display error message
+      error: function (error) {
+        const errorMessage = `Error Encountered: ${error.status} - ${error.statusText}`;
+        $(".ajax-call-error").text(errorMessage).slideDown();
       },
     });
   };
